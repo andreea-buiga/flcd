@@ -1,0 +1,43 @@
+program = "hello" decllist ";" cmpdstmt "bye"
+
+decllist = declaration | declaration ";" decllist
+
+declaration = type " " IDENTIFIER
+
+type = "bool" | "char" | "string" | "int"
+
+arraydecl = "arr" " " type IDENTIFIER "[" integer "]"
+
+assignstmt = IDENTIFIER "=" expression
+
+simplstmt = assignstmt | iostmt | declaration
+
+stmt = simplstmt | structstmt
+
+stmtlist = stmt | stmt '\n' stmtlist
+
+cmpdstmt = "BEGIN" stmtlist "END"
+
+expression = expression symbol term | term
+
+symbol = "+" | "-" | "*" | "/" | "//" | "%"
+
+term = "(" expression ")" | IDENTIFIER
+
+iostmt = "read" "(" IDENTIFIER ")" | "write" "(" IDENTIFIER ")"
+
+structstmt = cmpdstmt | ifstmt | whilestmt
+
+forstmt = "for" assignstmt ", " condition ", " "step" "(" expression ")" "{" cmpdstmt "}"
+
+ifstmt = "if" condition "{" stmt "}" [ "else" "{" stmt "}" ]
+
+whilestmt = "while" condition "{" stmt "}"
+
+conditionlist ::= condition | condition OPERATION condition
+
+condition ::= "(" expression RELATION expression ")"
+
+RELATION = "<" | "<=" | "==" | "<>" | ">=" | ">" | "!="\
+
+OPERATION = "&&" | "||"
