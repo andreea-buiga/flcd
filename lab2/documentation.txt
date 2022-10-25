@@ -7,3 +7,6 @@ the modulo between the sum and the size of the hash table.
 
 When you want to add an element will first check whether the element is not already in the Symbol Table.
 If it already exists, return its -1, otherwise it will assign it the corresponding position in the hash table.
+
+The search function checks if the symbol is already in the hashtable, return its position if it finds it,
+return -1 otherwise.
