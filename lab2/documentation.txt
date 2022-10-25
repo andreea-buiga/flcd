@@ -1,0 +1,9 @@
+https://github.com/andreea-buiga/flcd/tree/main/lab2
+
+The Symbol Table is implemented using a Hash Table, storing both identifiers and constants.
+
+The hash function will sum up all the ascii codes of each character and the hash value will be
+the modulo between the sum and the size of the hash table.
+
+When you want to add an element will first check whether the element is not already in the Symbol Table.
+If it already exists, return its -1, otherwise it will assign it the corresponding position in the hash table.
