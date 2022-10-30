@@ -87,19 +87,19 @@ class Scanner:
                 if token in self.__separators or token in self.__keywords:
                     self.__pif.append((token, -1))
                 # identifiers and constants
-                elif self.is_constant(token) or self.is_identifier(token):
+                elif self.is_constant(token):
                     # string constant
                     if len(string_constant) != 0 and token in string_constant[0]:
                         position_in_st = self.__symbol_table.add(string_constant)
                         self.__pif.append(('CONSTANT', position_in_st))
-                    # identifier
-                    elif self.is_identifier(token):
-                        position_in_st = self.__symbol_table.add(token)
-                        self.__pif.append(('IDENTIFIER', position_in_st))
                     # number constant
                     else:
                         position_in_st = self.__symbol_table.add(token)
                         self.__pif.append(('CONSTANT', position_in_st))
+                # identifier
+                elif self.is_identifier(token):
+                    position_in_st = self.__symbol_table.add(token)
+                    self.__pif.append(('IDENTIFIER', position_in_st))
                 # handle double separators (<=, >=, ==, !=, &&, ||)
                 elif i < len(program_lines) - 1:
                     if self.double_separators(token, program_lines[i + 1]):
