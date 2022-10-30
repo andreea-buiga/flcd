@@ -1,0 +1,21 @@
+hello
+
+arr int numbers [50];
+int input = -1;
+int maximum = -1;
+
+BEGIN
+write("Input positive numbers type 0 to stop")
+
+while(input != 0) {
+    write("elem = ");
+    read(input);
+    if(input > maximum) {
+         maximum = input
+    }
+}
+
+write(maximum)
+END
+
+BYE
