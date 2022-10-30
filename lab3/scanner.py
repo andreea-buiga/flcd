@@ -104,7 +104,10 @@ class Scanner:
                 elif i < len(program_lines) - 1:
                     if self.double_separators(token, program_lines[i + 1]):
                         self.__pif.append((token + program_lines[i + 1], -1))
-                        i = i + 1
+                    else:
+                        self.__message += "Lexical error at line " + str(
+                            number_of_line) + " unknown token " + token + program_lines[i + 1] + "\n"
+                    i = i + 1
                 else:
                     self.__message += "Lexical error at line " + str(number_of_line) + " unknown token " + token + "\n"
                 i = i + 1
