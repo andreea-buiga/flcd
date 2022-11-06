@@ -5,17 +5,17 @@ int b;
 int c;
 
 BEGIN
-a = read()
-b = read()
-c = read()
+a2 = read("a = ")
+b1 = read("b = ")
+c = read("c = ")
 
-if(a >= b && a >= c) {
-    write(a)
+if(a2 >= b1 && a2 >= c) {
+    write(a2)
 }
-if(b >= a && b >= c) {
-    write(b)
+if(b1 >= a2 && b1 >= c) {
+    write(b1)
 }
-if(c >= a && c >= b) {
+if(c >= a2 && c >= b1) {
     write(c)
 }
 END

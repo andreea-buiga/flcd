@@ -1,48 +1,49 @@
+from collections import deque
+
+
 class HashTable:
     def __init__(self, size):
         self.__size = size
-        self.__hashtable = {}
+        # deque ( implemented as a double ended linked list)
+        # if two elements hash to the same value they are chained
+        # to it's respective deque
+        self.__items = [deque() for _ in range(size)]
+
+    def hash(self, key):
+        """
+        h(k) = k % size - in our case k is the sum of ascii numbers
+        :param key: input token
+        :return: the value of the hash function
+        """
+        total_sum = 0
+        for character in key:
+            total_sum += ord(character)
+        return total_sum % self.__size
+
+    def add(self, key):
+        if self.contains(key):
+            return self.get_position(key)
+        self.__items[self.hash(key)].append(key)
+        return self.get_position(key)
+
+    def contains(self, key):
+        return key in self.__items[self.hash(key)]
+
+    def remove(self, key):
+        self.__items[self.hash(key)].remove(key)
+
+    def __str__(self) -> str:
+        result = ""
         for i in range(self.__size):
-            self.__hashtable[i] = []
+            result = result + str(i) + "-" + str(self.__items[i]) + "\n"
+        return result
 
-    def add(self, symbol):
-        """
-        :param symbol: symbol to be added to the hash table
-        :return: position in the hashtable
-        """
-        position = self.search_symbol(symbol)
-        if position == -1:
-            hash_key = self.hash_function(symbol)
-            self.__hashtable[hash_key].append(symbol)
-            return hash_key
-
-        return position
-
-    def hash_function(self, symbol):
-        """
-        :param symbol: symbol to be hashed
-        :return: the position - the sum of ascii numbers % size
-        """
-        ascii_sum = 0
-        for i in range(len(str(symbol))):
-            ascii_sum += ord(str(symbol)[i])
-
-        return ascii_sum % self.__size
-
-    def search_symbol(self, symbol):
-        """
-        :param symbol: symbol to be searched in the hash table
-        :return: the position in hashtable if it is already there
-                -1, otherwise
-        """
-        position = self.hash_function(symbol)
-        if symbol not in self.__hashtable[position]:
-            return -1
-
-        return position
-
-    def symbol(self, position):
-        return self.__hashtable[position]
-
-    def size(self):
-        return self.__size
+    def get_position(self, key):
+        listPosition = self.hash(key)
+        listIndex = 0
+        for item in self.__items[listPosition]:
+            if item != key:
+                listIndex += 1
+            else:
+                break
+        return listPosition, listIndex

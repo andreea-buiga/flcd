@@ -1,71 +1,71 @@
 hello | -1
 arr | -1
 int | -1
-IDENTIFIER | 14
+IDENTIFIER | (14, 0)
 [ | -1
-CONSTANT | 11
+CONSTANT | (11, 0)
 ] | -1
 ; | -1
 int | -1
-IDENTIFIER | 20
+IDENTIFIER | (20, 0)
 = | -1
 - | -1
-CONSTANT | 19
+CONSTANT | (19, 0)
 ; | -1
 int | -1
-IDENTIFIER | 16
+IDENTIFIER | (16, 0)
 = | -1
 - | -1
-CONSTANT | 19
+CONSTANT | (19, 0)
 ; | -1
 BEGIN | -1
 write | -1
 ( | -1
 " | -1
-IDENTIFIER | 18
-IDENTIFIER | 13
-IDENTIFIER | 14
-IDENTIFIER | 0
-CONSTANT | 18
-IDENTIFIER | 17
-IDENTIFIER | 4
+IDENTIFIER | (18, 0)
+IDENTIFIER | (13, 0)
+IDENTIFIER | (14, 0)
+IDENTIFIER | (0, 0)
+CONSTANT | (18, 1)
+IDENTIFIER | (17, 0)
+IDENTIFIER | (4, 0)
 " | -1
 ) | -1
 while | -1
 ( | -1
-IDENTIFIER | 20
+IDENTIFIER | (20, 0)
 != | -1
-CONSTANT | 18
+CONSTANT | (18, 1)
 ) | -1
 { | -1
 write | -1
 ( | -1
 " | -1
-IDENTIFIER | 29
+IDENTIFIER | (29, 0)
 = | -1
 " | -1
 ) | -1
 ; | -1
 read | -1
 ( | -1
-IDENTIFIER | 20
+IDENTIFIER | (20, 0)
 ) | -1
 ; | -1
 if | -1
 ( | -1
-IDENTIFIER | 20
+IDENTIFIER | (20, 0)
 > | -1
-IDENTIFIER | 16
+IDENTIFIER | (16, 0)
 ) | -1
 { | -1
-IDENTIFIER | 16
+IDENTIFIER | (16, 0)
 = | -1
-IDENTIFIER | 20
+IDENTIFIER | (20, 0)
 } | -1
 } | -1
 write | -1
 ( | -1
-IDENTIFIER | 16
+IDENTIFIER | (16, 0)
 ) | -1
 END | -1
-IDENTIFIER | 14
+IDENTIFIER | (14, 1)

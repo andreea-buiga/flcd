@@ -9,17 +9,16 @@ append((token, position)) - add the tuple (token, position) to the pif
              position - int, represents position in the SymbolTable
 
 Scanner
+scan(file_name) - does the scanning algorithm for the tokens
+    - input: file_name - string, the location of the program we read from
 The scanner reads a given a program file, line by line. For each line it will split all the
 different tokens of that line.
-
 After we have all the tokens from a line, they need to be classified. If they are tokens from the
 operators or keywords, they will be added to the PIF table with the -1 position.
 If the token is a constant or identifier (using regular expressions), we first add them to the SymbolTable(ST)
 and then use the position returned from the ST to add it to the PIF list.
-
 If the scanning algorithm didn't detect any errors, the SymbolTable and the PIF will be written in an ".out" file
 for the corresponding program.
-
 If the token is not a special token, identifier or constant a lexical error will be thrown.
 
 is_identifier(string) - verifies if a string is an identifier using REGEX

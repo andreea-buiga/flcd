@@ -5,30 +5,17 @@ class SymbolTable:
     def __init__(self, size):
         self.__hashtable = HashTable(size)
 
-    def add(self, symbol):
-        """
-        add element to the symbol table
-        """
-        return self.__hashtable.add(symbol)
-
-    def search(self, symbol):
-        """
-        search symbol in symbol table
-        """
-        return self.__hashtable.search_symbol(symbol)
-
-    def symbol(self, position):
-        """
-        get the symbol on position
-        """
-        return self.__hashtable.symbol(position)
-
-    def size(self):
-        return self.__hashtable.size()
-
     def __str__(self):
-        st_str = ""
-        for elem in range(self.size()):
-            st_str += str(elem) + " -> " + str(self.symbol(elem)) + "\n"
+        return str(self.__hashtable)
 
-        return st_str
+    def add(self, key):
+        return self.__hashtable.add(key)
+
+    def contains(self, key):
+        return self.__hashtable.contains(key)
+
+    def remove(self, key):
+        self.__hashtable.remove(key)
+
+    def get_position(self, key):
+        return self.__hashtable.get_position(key)

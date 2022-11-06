@@ -1,81 +1,93 @@
 hello | -1
 int | -1
-IDENTIFIER | 7
+IDENTIFIER | (7, 0)
 ; | -1
 int | -1
-IDENTIFIER | 8
+IDENTIFIER | (8, 0)
 ; | -1
 int | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 ; | -1
 BEGIN | -1
-IDENTIFIER | 7
+CONSTANT | (27, 0)
 = | -1
 read | -1
 ( | -1
+" | -1
+IDENTIFIER | (7, 0)
+= | -1
+" | -1
 ) | -1
-IDENTIFIER | 8
+CONSTANT | (27, 1)
 = | -1
 read | -1
 ( | -1
+" | -1
+IDENTIFIER | (8, 0)
+= | -1
+" | -1
 ) | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 = | -1
 read | -1
 ( | -1
+" | -1
+IDENTIFIER | (9, 0)
+= | -1
+" | -1
 ) | -1
 if | -1
 ( | -1
-IDENTIFIER | 7
+CONSTANT | (27, 0)
 > | -1
 = | -1
-IDENTIFIER | 8
+CONSTANT | (27, 1)
 && | -1
-IDENTIFIER | 7
+CONSTANT | (27, 0)
 > | -1
 = | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 ) | -1
 { | -1
 write | -1
 ( | -1
-IDENTIFIER | 7
+CONSTANT | (27, 0)
 ) | -1
 } | -1
 if | -1
 ( | -1
-IDENTIFIER | 8
+CONSTANT | (27, 1)
 > | -1
 = | -1
-IDENTIFIER | 7
+CONSTANT | (27, 0)
 && | -1
-IDENTIFIER | 8
+CONSTANT | (27, 1)
 > | -1
 = | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 ) | -1
 { | -1
 write | -1
 ( | -1
-IDENTIFIER | 8
+CONSTANT | (27, 1)
 ) | -1
 } | -1
 if | -1
 ( | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 > | -1
 = | -1
-IDENTIFIER | 7
+CONSTANT | (27, 0)
 && | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 > | -1
 = | -1
-IDENTIFIER | 8
+CONSTANT | (27, 1)
 ) | -1
 { | -1
 write | -1
 ( | -1
-IDENTIFIER | 9
+IDENTIFIER | (9, 0)
 ) | -1
 } | -1
 END | -1
