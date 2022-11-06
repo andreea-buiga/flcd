@@ -1,4 +1,4 @@
-https://github.com/andreea-buiga/flcd/tree/main/lab3
+https://github.com/andreea-buiga/flcd/tree/main/labs1-3
 
 PIF
 The PIF is represented by a list of tuples of type (string, int), to represent the token and the position
