@@ -1,0 +1,46 @@
+https://github.com/andreea-buiga/flcd/tree/main/lab3
+
+PIF
+The PIF is represented by a list of tuples of type (string, int), to represent the token and the position
+in the symbol table.
+
+append((token, position)) - add the tuple (token, position) to the pif
+    - input: token - string
+             position - int, represents position in the SymbolTable
+
+Scanner
+The scanner reads a given a program file, line by line. For each line it will split all the
+different tokens of that line.
+
+After we have all the tokens from a line, they need to be classified. If they are tokens from the
+operators or keywords, they will be added to the PIF table with the -1 position.
+If the token is a constant or identifier (using regular expressions), we first add them to the SymbolTable(ST)
+and then use the position returned from the ST to add it to the PIF list.
+
+If the scanning algorithm didn't detect any errors, the SymbolTable and the PIF will be written in an ".out" file
+for the corresponding program.
+
+If the token is not a special token, identifier or constant a lexical error will be thrown.
+
+is_identifier(string) - verifies if a string is an identifier using REGEX
+    - input: string to verify
+    - output: True, if it matches,
+              False, otherwise
+
+is_constant(string) - verifies if a string is an identifier using REGEX
+    - input: string to verify
+    - output: True, if it matches for either integer, char or string pattern,
+              False, otherwise
+
+double_separators(sep1, sep2) - treats the special case with double separators (&&, ||, <=, >=, ==)
+    - input: sep1, sep2 - two strings representing two separators
+    - output: True, if it matches,
+              False, otherwise
+
+read_from_file(file_name) - reads from a filename
+    - input: string, location of the filename to read
+
+write_to_file(self, file_name, option) - write to file
+    - input: file_name - string, where to write for
+             option - int, where to output to ST/PIF
+

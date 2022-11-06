@@ -1,0 +1,23 @@
+https://github.com/andreea-buiga/flcd/tree/main/lab2
+
+The Symbol Table is implemented using a Hash Table, storing both identifiers and constants.
+
+The hash function will sum up all the ascii codes of each character and the hash value will be
+the modulo between the sum and the size of the hash table.
+hash_function()
+        :input symbol: symbol to be hashed
+        :output: the position - the sum of ascii numbers % size
+
+When you want to add an element will first check whether the element is not already in the Symbol Table.
+If it already exists, return its -1, otherwise it will assign it the corresponding position in the hash table.
+add()
+        :input symbol: symbol to be added to the hash table
+        :output: position in the hashtable
+                -1, if it exists
+
+The search function checks if the symbol is already in the hashtable, return its position if it finds it,
+return -1 otherwise.
+search()
+	:input symbol: symbol to be searched in the hash table
+        :output: the position in hashtable
+                -1, otherwise

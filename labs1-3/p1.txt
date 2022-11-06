@@ -1,0 +1,22 @@
+hello
+
+int a;
+int b;
+int c;
+
+BEGIN
+a = read()
+b = read()
+c = read()
+
+if(a >= b && a >= c) {
+    write(a)
+}
+if(b >= a && b >= c) {
+    write(b)
+}
+if(c >= a && c >= b) {
+    write(c)
+}
+END
+bye

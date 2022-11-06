@@ -1,0 +1,6 @@
+1. for reading input we use "READ".
+2. for assignment (=) we use an arrow 🡠.
+3. instead of print we use print_this_please.
+4. all variables should have at least a letter and at least a number.
+5. the last line of code should be "quod erat demonstrandum".
+6. functions start with funct.
