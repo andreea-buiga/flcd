@@ -1,4 +1,17 @@
-
+https://github.com/andreea-buiga/flcd/tree/main/lab4
 
 Finite automata
+
+FA.in
+
+letter = "a" | "b" | ... | "z" | "A" | ... | "Z"
+digit = "0" | "1" | ... | "9"
+sign = "-" | "+"
+state_name = letter {letter} digit {digit}
+states = state_name {" " state_name}
+token = letter | sign | digit 
+alphabet = token {" " token}
+initial_state = state_name
+final_states = state_name {" " state_name}
+transitions = state_name "," token "," state_name
 
