@@ -15,3 +15,22 @@ initial_state = state_name
 final_states = state_name {" " state_name}
 transitions = state_name "," token "," state_name
 
+FA class has the states, alphabet, initial state, final states and transitions and file_name to know from where to read. Has getters and setters for the attributes.
+
+readFA() - reads the file and stores the values for the FA attributes correspondingly.
+
+represent_transitions(transitions) - reads each line from the transitions and stores them as a key value pair (q0, token) -> q1
+	- input: the list of transition from the file
+
+is_deterministic() - checks if FA is deterministic, if the key pairs are unique to their value (or node1 -> node2 doesn't repeat)
+	- output: boolean 
+		True, if the FA is deterministic
+		False, otherwise
+
+check_sequence(sequence) - checks if a given sequence respects the FA
+	- checks if the FA is deterministic
+	- if True, check the sequence one by one with the transitions, from the initial state, to the character in the sequence 
+	- input: string - the sequence we want to verify
+	- output: boolean 
+		True, if the FA is deterministic
+		False, otherwise
