@@ -1,0 +1,22 @@
+hello
+
+int a;
+int b;
+
+BEGIN
+a = read()
+b = read()
+while(b != 0) {
+    if(a > b) {
+        a = a - b
+    }
+    else
+        if(b > a) {
+            b = b - a
+        }
+}
+END
+
+write(a)
+
+bye

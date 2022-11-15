@@ -1,6 +1,6 @@
 class FA:
     def __init__(self, file_name):
-        self.file = file_name
+        self.__file_name = file_name
         self.FA = self.read_FA()
         self.FA_Q = self.FA[0]  # set of states
         self.FA_E = self.FA[1]  # the alphabet
@@ -10,7 +10,7 @@ class FA:
 
     def read_FA(self):
         fa = []
-        with open(self.file) as f:
+        with open(self.__file_name) as f:
             # get the finite set of states
             line = f.readline()
             fa.append(line[0:-1].split(" "))

@@ -16,8 +16,7 @@ def print_menu():
 
 
 def menu():
-    fa = FA("./FA.in")
-    # fa = FA("./FA_identifier.in")
+    fa = FA("./FA_input/FA_identifier.in")
     while True:
         try:
             print_menu()
