@@ -56,6 +56,8 @@ class FA:
         current_state = self.get_FA_q0()[0]
 
         for i in sequence:
+            if i not in self.FA_E:
+                return False
             if (current_state, i) not in self.FA_d.keys():
                 return False
             current_state = self.FA_d[(current_state, i)][0]

@@ -13,7 +13,8 @@ token = letter | sign | digit
 alphabet = token {" " token}
 initial_state = state_name
 final_states = state_name {" " state_name}
-transitions = state_name "," token "," state_name
+transition = state_name "," token "," state_name
+transitions = transition {"\n" transition}
 
 FA class has the states, alphabet, initial state, final states and transitions and file_name to know from where to read. Has getters and setters for the attributes.
 
