@@ -1,3 +1,9 @@
+https://github.com/andreea-buiga/flcd/tree/main/labs5-7
+
+project by:
+Buiga Andreea
+Cantor Dan
+
 1) Grammar
 
 Attributes
