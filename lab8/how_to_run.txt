@@ -1,0 +1,11 @@
+STEP 1:
+
+flex lang.lxi
+
+STEP 2:
+
+gcc lex.yy.c
+
+STEP 3:
+
+a.exe p1.txt

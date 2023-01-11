@@ -1,0 +1,13 @@
+HELLO
+var a#int;
+var b#int;
+var c#int;
+var 12namevar #int;
+if a >= b && a >= c:
+	write(a);
+if b >= a && b >= c:
+	write(b);
+if c >= b && c >= a:
+	write(c);
+a = +0;
+BYE
