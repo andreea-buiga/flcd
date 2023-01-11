@@ -1,0 +1,14 @@
+HELLOM
+int a, b, c, max;
+read a, b, c;
+12max;
+if a > b:
+	max = a;
+else:
+	max = b;
+endif
+if max < c:
+	max = c;
+endif
+write max;
+BYE

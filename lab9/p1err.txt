@@ -1,7 +1,0 @@
-start
-string a, b, $concat_ab
-a = "word a";
-b = "word b;
-$concat_ab = a + " " + b;
-print $concat_ab;
-finish
