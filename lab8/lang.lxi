@@ -14,9 +14,9 @@ CHAR		[\'][a-zA-Z0-9 ][\']
 
 %%
 
-"HELLO"|"BYE"|"func"|"read"|"write"|"if"|"elif"|"else"|"loop"|"while"|"int"|"string"|"char"|"bool"		{printf("Reserved word: %s\n", yytext);}
+"HELLO"|"BYE"|"func"|"read"|"write"|"if"|"endif"|"else"|"for"|"from"|"to"|"endwhile"|"while"|"int"|"string"|"char"|"bool"|"var"		{printf("Reserved word: %s\n", yytext);}
 "+"|"-"|"*"|"/"|"%"|"<="|">="|"="|"!="|"<"|">"|"&&"|"||"		{printf("Operator: %s\n", yytext);}
-"{"|"}"|"["|"]"|"("|")"|"["|"]"|":"|";"|"'"|"#"|"\""		{printf("Separator: %s\n", yytext);}
+"{"|"}"|"["|"]"|"("|")"|"["|"]"|":"|","|";"|"'"|"#"|"\""		{printf("Separator: %s\n", yytext);}
 {IDENTIFIER}		{printf("Identifier: %s\n", yytext);}
 {INTEGER}		{printf("Integer: %s\n", yytext);}
 {STRING}		{printf("String: %s\n", yytext);}

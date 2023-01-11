@@ -1,11 +1,13 @@
 HELLO
-var a#int;
-var b#int;
-var c#int;
-if a >= b && a >= c:
-	write(a);
-if b >= a && b >= c:
-	write(b);
-if c >= b && c >= a:
-	write(c);
+int a, b, c, max;
+read a, b, c;
+if a > b:
+	max = a;
+else:
+	max = b;
+endif
+if max < c:
+	max = c;
+endif
+write max;
 BYE
