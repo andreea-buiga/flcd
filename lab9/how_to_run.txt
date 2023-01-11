@@ -1,0 +1,15 @@
+STEP 1:
+
+flex lang.lxi
+
+STEP 2:
+
+bison -dy parser.y
+
+STEP 3:
+
+gcc lex.yy.c y.tab.c
+
+STEP 4:
+
+a.exe p1.txt
